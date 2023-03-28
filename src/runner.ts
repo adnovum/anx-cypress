@@ -61,7 +61,7 @@ const runCypress = async (cypressCmd: string, resultsFolder: string, reportsFold
 		await exec([
 			cypressCmd,
 			'--reporter mochawesome',
-			`--reporter-options reportDir="${resultsFolderAbs}",overwrite=false,html=false,json=true`,
+			`--reporter-options reportDir="${resultsFolder}",overwrite=false,html=false,json=true`,
 		].join(' '));
 	}
 	finally {
