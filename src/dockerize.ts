@@ -41,6 +41,7 @@ export const dockerize = async (): Promise<void> => {
 		'-w', '/workdir',
 		'-e', 'HOME=/opt/cypress/home',
 		'-e', 'NPM_CONFIG_PREFIX=/workdir',
+		'-e', 'CYPRESS_VERIFY_TIMEOUT=100000',
 		...cypressEnvVars,
 		'-e', 'HTTP_PROXY', '-e', 'HTTPS_PROXY', '-e', 'NO_PROXY',
 		'-e', 'http_proxy', '-e', 'https_proxy', '-e', 'no_proxy',
